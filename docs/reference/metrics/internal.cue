@@ -66,8 +66,20 @@ _metrics: _internal: {
 				description: "The type of the error"
 				required: true
 				type: string: enum: {
+					convert_failed: ""
+					failed_mapping: ""
+					failed_match: ""
+					failed_parse: ""
+					failed_serialize: ""
 					field_missing: "The field is missing from the event."
-					value_invalid
+					field_not_found: ""
+					invalid_metric: ""
+					parse_error: ""
+					render_error: ""
+					target_field_exists: ""
+					template_error: ""
+					type_conversion_failed: "Failed to convert from one type to another."
+					value_invalid: "The value produced is invalid."
 				}
 			}
 		}
