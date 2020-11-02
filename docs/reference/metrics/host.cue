@@ -58,13 +58,13 @@ _metrics: _host: {
 	host_memory_wired_bytes: _memory_macos & {description: "The number of wired bytes of main memory."}
 
 	// Network
-	host_network_receive_bytes_total:         _network_gauge & {description:   "The number of bytes received on this interface."}
-	host_network_receive_errs_total:          _network_gauge & {description:   "The number of errors encountered during receives on this interface."}
-	host_network_receive_packets_total:       _network_gauge & {description:   "The number of packets received on this interface."}
-	host_network_transmit_bytes_total:        _network_gauge & {description:   "The number of bytes transmitted on this interface."}
-	host_network_transmit_errs_total:         _network_gauge & {description:   "The number of errors encountered during transmits on this interface."}
-	host_network_transmit_packets_drop_total: _network_nomac & {description:   "The number of packets dropped during transmits on this interface."}
-	host_network_transmit_packets_total:      _network_nomac & {description:   "The number of packets transmitted on this interface."}
+	host_network_receive_bytes_total:         _network_gauge & {description: "The number of bytes received on this interface."}
+	host_network_receive_errs_total:          _network_gauge & {description: "The number of errors encountered during receives on this interface."}
+	host_network_receive_packets_total:       _network_gauge & {description: "The number of packets received on this interface."}
+	host_network_transmit_bytes_total:        _network_gauge & {description: "The number of bytes transmitted on this interface."}
+	host_network_transmit_errs_total:         _network_gauge & {description: "The number of errors encountered during transmits on this interface."}
+	host_network_transmit_packets_drop_total: _network_nomac & {description: "The number of packets dropped during transmits on this interface."}
+	host_network_transmit_packets_total:      _network_nomac & {description: "The number of packets transmitted on this interface."}
 
 	// Helpers
 	_disk_device: {

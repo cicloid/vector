@@ -4,7 +4,7 @@ _metrics: _tags: {
 	_collector: {
 		description: "Which collector this metric comes from."
 		required:    true
-		type: string
+		type:        string
 	}
 	_component_kind: {
 		description: "The component's kind (options are `source`, `sink`, or `transform`)."
@@ -28,24 +28,24 @@ _metrics: _tags: {
 	_endpoint: {
 		description: "The absolute path of originating file."
 		required:    true
-		type: string
+		type:        string
 		examples: ["http://localhost:8080/server-status?auto"]
 	}
 	_host: {
 		description: "The hostname of the originating system."
 		required:    true
-		type: string
+		type:        string
 		examples: [_values.local_host]
 	}
 	_instance: {
 		description: "The Vector instance identified by host and port."
 		required:    true
-		type: string
+		type:        string
 		examples: [_values.instance]
 	}
 	_job: {
 		description: "The name of the job producing Vector metrics."
-		required: true
+		required:    true
 		type: string: default: "vector"
 	}
 
@@ -58,15 +58,15 @@ _metrics: _tags: {
 			}
 		}
 		_component: {
-			component_kind: _component_kind,
-			component_name: _component_name,
-			component_type: _component_type,
-			instance: _instance,
-			job: _job
+			component_kind: _component_kind
+			component_name: _component_name
+			component_type: _component_type
+			instance:       _instance
+			job:            _job
 		}
 		_host_metrics: {
 			collector: _collector
-			host: _host
+			host:      _host
 		}
 	}
 }
