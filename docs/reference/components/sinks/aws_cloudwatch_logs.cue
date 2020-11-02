@@ -118,4 +118,8 @@ components: sinks: aws_cloudwatch_logs: {
 		logs:    true
 		metrics: null
 	}
+
+	output: metrics: {
+
+	}
 }

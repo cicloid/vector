@@ -50,6 +50,7 @@ _metrics: _tags: {
 	}
 
 	_default: {
+		// Default tags for the apache_metrics source
 		_apache_metrics: _metrics._tags._endpoint & {
 			host: {
 				description: "The hostname of the Apache HTTP server."
@@ -57,6 +58,7 @@ _metrics: _tags: {
 				examples: [_values.local_host]
 			}
 		}
+		// Default tags for Vector component metrics
 		_component: {
 			component_kind: _component_kind
 			component_name: _component_name
@@ -64,10 +66,17 @@ _metrics: _tags: {
 			instance:       _instance
 			job:            _job
 		}
+		// Default tags for the host_metrics source
 		_host_metrics: {
 			collector: _collector
 			host:      _host
 		}
+		// Default tags for the internal_metrics source
+		_internal_metrics: {
+			instance: _instance
+			job: _job
+		}
+		// Default tags for the mongodb_metrics source
 		_mongodb_metrics: {
 			_endpoint: {
 				description: "The absolute path of originating file."
