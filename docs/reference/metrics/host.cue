@@ -1,11 +1,13 @@
 package metadata
 
 _metrics: _host: {
+	_default_tags: _metrics._tags._default._host_metrics
+
 	// CPU
 	host_cpu_seconds_total: {
 		description: "The number of CPU seconds accumulated in different operating modes."
 		type:        "counter"
-		tags:        _metrics._tags._default._host_metrics & {
+		tags:        _default_tags & {
 			collector: examples: ["cpu"]
 			cpu: {
 				description: "The index of the CPU core or socket."
@@ -74,14 +76,14 @@ _metrics: _host: {
 	}
 	_disk_counter: {
 		type: "counter"
-		tags: _metrics._tags._default._host_metrics & {
+		tags: _default_tags & {
 			collector: examples: ["disk"]
 			device: _disk_device
 		}
 	}
 	_filesystem_bytes: {
 		type: "gauge"
-		tags: _metrics._tags._default._host_metrics & {
+		tags: _default_tags & {
 			collector: examples: ["filesystem"]
 			device: _disk_device
 			filesystem: {
@@ -93,20 +95,20 @@ _metrics: _host: {
 	}
 	_loadavg: {
 		type: "gauge"
-		tags: _metrics._tags._default._host_metrics & {
+		tags: _default_tags & {
 			collector: examples: ["loadavg"]
 		}
 		relevant_when: "OS is not Windows"
 	}
 	_memory_counter: {
 		type: "counter"
-		tags: _metrics._tags._default._host_metrics & {
+		tags: _default_tags & {
 			collector: examples: ["memory"]
 		}
 	}
 	_memory_gauge: {
 		type: "gauge"
-		tags: _metrics._tags._default._host_metrics & {
+		tags: _default_tags & {
 			collector: examples: ["memory"]
 		}
 	}
@@ -115,7 +117,7 @@ _metrics: _host: {
 	_memory_nowin: {relevant_when: "OS is not Windows"}
 	_network_gauge: {
 		type: "gauge"
-		tags: _metrics._tags._default._host_metrics & {
+		tags: _default_tags & {
 			collector: examples: ["network"]
 			device: {
 				description: "The network interface device name."

@@ -68,5 +68,19 @@ _metrics: _tags: {
 			collector: _collector
 			host:      _host
 		}
+		_mongodb_metrics: {
+			_endpoint: {
+				description: "The absolute path of originating file."
+				required:    true
+				type:        string
+				examples: ["mongodb://localhost:27017"]
+			}
+			_host: {
+				description: "The hostname of the MongoDB server."
+				required:    true
+				type:        string
+				examples: [_values.local_host]
+			}
+		}
 	}
 }
