@@ -111,7 +111,7 @@ components: sources: apache_metrics: {
 		}
 	}
 
-	output: metrics: metrics.apache
+	output: metrics: _metrics._apache
 
 	how_it_works: {}
 }
