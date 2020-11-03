@@ -151,7 +151,7 @@ components: sinks: aws_kinesis_streams: {
 	}
 
 	output: metrics: {
-		processed_bytes_total: _metrics._internal._processed_bytes_total
+		processed_bytes_total:  _metrics._internal._processed_bytes_total
 		events_processed_total: _metrics._internal._events_processed_total
 	}
 }

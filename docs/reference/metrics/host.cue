@@ -53,11 +53,11 @@ _metrics: _host: {
 	host_memory_swapped_out_bytes_total: _memory_counter & _memory_nowin & {
 		description: "The number of bytes that have been swapped out from main memory."
 	}
-	host_memory_swap_total_bytes:       _memory_gauge & {description:                 "The total number of bytes of swap space."}
-	host_memory_swap_used_bytes:        _memory_gauge & {description:                 "The number of used bytes of swap space."}
-	host_memory_total_bytes:            _memory_gauge & {description:                 "The total number of bytes of main memory."}
-	host_memory_used_bytes:             _memory_linux & {description:                 "The number of bytes of main memory used by programs or caches."}
-	host_memory_wired_bytes: _memory_macos & {description: "The number of wired bytes of main memory."}
+	host_memory_swap_total_bytes: _memory_gauge & {description: "The total number of bytes of swap space."}
+	host_memory_swap_used_bytes:  _memory_gauge & {description: "The number of used bytes of swap space."}
+	host_memory_total_bytes:      _memory_gauge & {description: "The total number of bytes of main memory."}
+	host_memory_used_bytes:       _memory_linux & {description: "The number of bytes of main memory used by programs or caches."}
+	host_memory_wired_bytes:      _memory_macos & {description: "The number of wired bytes of main memory."}
 
 	// Network
 	host_network_receive_bytes_total:         _network_gauge & {description: "The number of bytes received on this interface."}

@@ -163,8 +163,8 @@ components: sinks: http: {
 	}
 
 	output: metrics: {
-		events_processed_total: _metrics._internal._events_processed_total
+		events_processed_total:  _metrics._internal._events_processed_total
 		http_bad_requests_total: _metrics._internal._http_bad_requests_total
-		processed_bytes_total: _metrics._internal._processed_bytes_total
+		processed_bytes_total:   _metrics._internal._processed_bytes_total
 	}
 }

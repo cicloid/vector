@@ -242,7 +242,7 @@ components: sinks: elasticsearch: {
 
 	output: metrics: {
 		events_processed_total: _metrics._internal._events_processed_total
-		missing_keys_total: _metrics._internal._missing_keys_total
-		processed_bytes_total: _metrics._internal._processed_bytes_total
+		missing_keys_total:     _metrics._internal._missing_keys_total
+		processed_bytes_total:  _metrics._internal._processed_bytes_total
 	}
 }

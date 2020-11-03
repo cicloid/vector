@@ -145,4 +145,11 @@ components: sources: kubernetes_logs: {
 					"""
 		}
 	}
+
+	output: metrics: {
+		events_processed_total:                 _metrics._internal._events_processed_total
+		processed_bytes_total:                  _metrics._internal._processed_bytes_total
+		k8s_docker_format_parse_failures_total: _metrics._kubernetes._k8s_docker_format_parse_failures_total
+		k8s_event_annotation_failures_total:    _metrics._kubernetes._k8s_event_annotation_failures_total
+	}
 }

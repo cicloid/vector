@@ -30,17 +30,17 @@ _metrics: _internal: {
 	}
 	_checkpoint_write_errors_total: {
 		description: "The total number of errors writing checkpoints."
-		type: "counter"
+		type:        "counter"
 	}
 	_checkpoints_total: {
 		description: "The total number of files checkpointed."
-		type: "counter"
+		type:        "counter"
 	}
 	_checksum_errors: {
 		description: ""
-		type: "counter"
-		tags: _default_tags & {
-			file: { required: false /* TODO */ }
+		type:        "counter"
+		tags:        _default_tags & {
+			file: {required: false}
 		}
 	}
 	_collect_duration_nanoseconds: {
@@ -51,61 +51,61 @@ _metrics: _internal: {
 		required:    true
 		type:        "counter"
 		tags:        _component_tags & {
-			file: { required: false /* TODO */ }
+			file: {required: false}
 		}
 	}
 	_file_delete_errors: {
 		description: "The total number of failures to delete a file."
-		type: "counter"
-		tags: _default_tags & {
-			file: { required: false /* TODO */ }
+		type:        "counter"
+		tags:        _default_tags & {
+			file: {required: false}
 		}
 	}
 	_file_watch_errors: {
 		description: "The total number of errors caused by failure to watch a file."
-		type: "counter"
-		tags: _default_tags & {
-			file: { required: false /* TODO */ }
+		type:        "counter"
+		tags:        _default_tags & {
+			file: {required: false}
 		}
 	}
 	_files_added: {
 		description: "The total number of files Vector has found to watch."
-		type: "counter"
-		tags: _default_tags & {
-			file: { required: false /* TODO */ }
+		type:        "counter"
+		tags:        _default_tags & {
+			file: {required: false}
 		}
 	}
 	_files_deleted: {
 		description: "The total number of files deleted."
-		type: "counter"
-		tags: _default_tags & {
-			file: { required: false /* TODO */ }
+		type:        "counter"
+		tags:        _default_tags & {
+			file: {required: false}
 		}
 	}
 	_files_resumed: {
 		description: "The total number of times Vector has resumed watching a file."
-		type: "counter"
-		tags: _default_tags & {
-			file: { required: false /* TODO */ }
+		type:        "counter"
+		tags:        _default_tags & {
+			file: {required: false}
 		}
 	}
 	_files_unwatched: {
 		description: "The total number of times Vector has stopped watching a file."
-		type: "counter"
-		tags: _default_tags & {
-			file: { required: false /* TODO */ }
+		type:        "counter"
+		tags:        _default_tags & {
+			file: {required: false}
 		}
 	}
 	_fingerprint_read_errors: {
 		description: "The total number of times failing to read a file for fingerprinting."
-		type: "counter"
-		tags: _default_tags & {
-			file: { required: false /* TODO */ }
+		type:        "counter"
+		tags:        _default_tags & {
+			file: {required: false}
 		}
 	}
 	_http_bad_requests_total: {
 		description: "The total number of HTTP `400 Bad Request` errors encountered."
-		type: "counter"
+		type:        "counter"
 	}
 	_http_error_response_total: {
 		type: "counter"
@@ -118,7 +118,7 @@ _metrics: _internal: {
 	}
 	_missing_keys_total: {
 		description: "The total number of events dropped due to keys missing from the event."
-		type: "counter"
+		type:        "counter"
 	}
 	_open_connections: {
 		description: "The number of current open connections to Vector."
@@ -132,7 +132,7 @@ _metrics: _internal: {
 		required:    true
 		type:        "counter"
 		tags:        _component_tags & {
-			file: { required: false /* TODO */ }
+			file: {required: false}
 		}
 	}
 	_processing_errors_total: {
@@ -170,8 +170,8 @@ _metrics: _internal: {
 	}
 	_timestamp_parse_errors_total: {
 		description: "The total number of errors encountered RFC3339 parsing timestamps."
-		type: "counter"
-		tags: _default_tags
+		type:        "counter"
+		tags:        _default_tags
 	}
 	_uptime_seconds: {
 		description: "The total number of seconds the Vector instance has been up."
