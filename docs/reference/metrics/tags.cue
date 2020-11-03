@@ -74,7 +74,7 @@ _metrics: _tags: {
 		// Default tags for the internal_metrics source
 		_internal_metrics: {
 			instance: _instance
-			job: _job
+			job:      _job
 		}
 		// Default tags for the mongodb_metrics source
 		_mongodb_metrics: {
