@@ -4,12 +4,11 @@ _metrics: _tags: {
 	_collector: {
 		description: "Which collector this metric comes from."
 		required:    true
-		type:        string
 	}
 	_component_kind: {
 		description: "The component's kind (options are `source`, `sink`, or `transform`)."
 		required:    true
-		type: string: enum: {
+		options: {
 			sink:      "Sink component."
 			source:    "Source component."
 			transform: "Transform component."
@@ -18,35 +17,32 @@ _metrics: _tags: {
 	_component_name: {
 		description: "The name of the component as specified in the Vector configuration."
 		required:    true
-		type: string: examples: ["file_source", "splunk_sink"]
+		examples: ["file_source", "splunk_sink"]
 	}
 	_component_type: {
 		description: "The type of component (source, transform, or sink)."
 		required:    true
-		type: string: examples: ["file", "http", "honeycomb", "splunk_hec"]
+		examples: ["file", "http", "honeycomb", "splunk_hec"]
 	}
 	_endpoint: {
 		description: "The absolute path of originating file."
 		required:    true
-		type:        string
 		examples: ["http://localhost:8080/server-status?auto"]
 	}
 	_host: {
 		description: "The hostname of the originating system."
 		required:    true
-		type:        string
 		examples: [_values.local_host]
 	}
 	_instance: {
 		description: "The Vector instance identified by host and port."
 		required:    true
-		type:        string
 		examples: [_values.instance]
 	}
 	_job: {
 		description: "The name of the job producing Vector metrics."
 		required:    true
-		type: string: default: "vector"
+		default:     "vector"
 	}
 
 	_default: {
@@ -81,13 +77,11 @@ _metrics: _tags: {
 			_endpoint: {
 				description: "The absolute path of originating file."
 				required:    true
-				type:        string
 				examples: ["mongodb://localhost:27017"]
 			}
 			_host: {
 				description: "The hostname of the MongoDB server."
 				required:    true
-				type:        string
 				examples: [_values.local_host]
 			}
 		}

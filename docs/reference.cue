@@ -552,8 +552,10 @@ _values: {
 #MetricTags: [Name=string]: close({
 	description: string
 	examples: [string, ...]
-	required: bool
+	required: bool | *false
+	options?: #Enum
 	name:     Name
+	default?: string
 })
 
 #MetricType: "counter" | "distribution" | "gauge" | "histogram" | "summary"

@@ -141,7 +141,7 @@ _metrics: _internal: {
 			error_type: {
 				description: "The type of the error"
 				required:    true
-				type: string: enum: {
+				options: {
 					convert_failed:         ""
 					failed_mapping:         ""
 					failed_match:           ""
