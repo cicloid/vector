@@ -104,7 +104,7 @@ components: sources: aws_kinesis_firehose: {
 					type: string: examples: ["ed1d787c-b9e2-4631-92dc-8e7c9d26d804"]
 				}
 				source_arn: {
-					description: "The AWS Kinises Firehose delivery stream that issued the request, value of the `X-Amz-Firehose-Source-Arn` header."
+					description: "The AWS Kinesis Firehose delivery stream that issued the request, value of the `X-Amz-Firehose-Source-Arn` header."
 					required:    true
 					type: string: examples: ["arn:aws:firehose:us-east-1:111111111111:deliverystream/test"]
 				}
@@ -186,5 +186,10 @@ components: sources: aws_kinesis_firehose: {
 				   forward the events to your delivery stream
 				"""
 		}
+	}
+
+	output: metrics: {
+		request_read_errors_total: _metrics._internal._request_read_errors_total
+		requests_received_total: _metrics._internal._requests_received_total
 	}
 }

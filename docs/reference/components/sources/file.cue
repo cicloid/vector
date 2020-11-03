@@ -515,4 +515,19 @@ components: sources: file: {
 				"""
 		}
 	}
+
+	output: metrics: {
+		checkpoint_write_errors_total: _metrics._internal._checkpoint_write_errors_total
+		checkpoints_total: _metrics._internal._checkpoints_total
+		checksum_errors: _metrics._internal._checksum_errors
+		events_processed_total: _metrics._internal._events_processed_total
+		file_delete_errors: _metrics._intenral._file_delete_errors
+		file_watch_errors: _metrics._internal._file_watch_errors
+		files_added: _metrics._internal._files_added
+		files_deleted: _metrics._internal._files_deleted
+		files_resumed: _metrics._internal._files_resumed
+		files_unwatched: _metrics._internal._files_unwatched
+		fingerprint_read_errors: _metrics._internal._fingerprint_read_errors
+		processed_bytes_total: _metrics._internal._processed_bytes_total
+	}
 }

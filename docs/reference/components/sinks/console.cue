@@ -79,4 +79,10 @@ components: sinks: console: {
 			summary:      true
 		}
 	}
+
+	output: metrics: {
+		events_processed_total: _metrics._internal._events_processed_total
+		processed_bytes_total: _metrics._internal._processed_bytes_total
+		processing_errors_total: _metrics._internal._processing_errors_total
+	}
 }

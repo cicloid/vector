@@ -265,4 +265,15 @@ components: sources: docker: {
 				"""
 		}
 	}
+
+	output: metrics: {
+		communication_errors_total: _metrics._container._communication_errors_total
+		container_events_processed_total: _metrics._container._container_events_processed_total
+		container_metadata_fetch_errors_total: _metrics._container._container_metadata_fetch_errors_total
+		containers_unwatched_total: _metrics._container._containers_unwatched_total
+		containers_watched_total: _metrics._container._containers_watched_total
+		events_processed_total: _metrics._internal._events_processed_total
+		logging_driver_errors_total: _metrics._container._logging_driver_errors_total
+		processed_bytes_total: _metrics._internal._processed_bytes_total
+	}
 }

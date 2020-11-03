@@ -167,4 +167,17 @@ components: sources: kafka: {
 	}
 
 	how_it_works: components._kafka.how_it_works
+
+	output: metrics: {
+		consumer_offset_updates_failed_total: {
+			description: "The total number of failures to update a Kafka consumer offset."
+			type: "counter"
+		}
+		events_failed_total: {
+			description: "The total number of failures to read a Kafka message."
+			type: "counter"
+		}
+		events_processed_total: _metrics._internal._events_processed_total
+		processed_bytes_total: _metrics._internal._processed_bytes_total
+	}
 }

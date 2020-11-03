@@ -132,8 +132,13 @@ components: transforms: json_parser: {
 
 						Notice that the `parent.child1` key was preserved.
 						"""
-				},
+				}
 			]
 		}
+	}
+
+	output: metrics: {
+		events_processed_total: _metrics._internal._events_processed_total
+		processing_errors_total: _metrics._internal._processing_errors_total
 	}
 }

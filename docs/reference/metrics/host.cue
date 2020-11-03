@@ -39,24 +39,24 @@ _metrics: _host: {
 	host_load15: _loadavg & {description: "System load averaged over the last 15 seconds."}
 
 	// Memory
-	host_memory_free_bytes:             _memory_gauge & {description:                 "The number of bytes of main memory not used."}
-	host_memory_available_bytes:        _memory_gauge & {description:                 "The number of bytes of main memory available."}
-	host_memory_swap_free_bytes:        _memory_gauge & {description:                 "The number of free bytes of swap space."}
-	host_memory_swap_total_bytes:       _memory_gauge & {description:                 "The total number of bytes of swap space."}
-	host_memory_swap_used_bytes:        _memory_gauge & {description:                 "The number of used bytes of swap space."}
-	host_memory_total_bytes:            _memory_gauge & {description:                 "The total number of bytes of main memory."}
 	host_memory_active_bytes:           _memory_gauge & _memory_nowin & {description: "The number of bytes of active main memory."}
+	host_memory_available_bytes:        _memory_gauge & {description:                 "The number of bytes of main memory available."}
 	host_memory_buffers_bytes:          _memory_linux & {description:                 "The number of bytes of main memory used by buffers."}
 	host_memory_cached_bytes:           _memory_linux & {description:                 "The number of bytes of main memory used by cached blocks."}
-	host_memory_shared_bytes:           _memory_linux & {description:                 "The number of bytes of main memory shared between processes."}
-	host_memory_used_bytes:             _memory_linux & {description:                 "The number of bytes of main memory used by programs or caches."}
+	host_memory_free_bytes:             _memory_gauge & {description:                 "The number of bytes of main memory not used."}
 	host_memory_inactive_bytes:         _memory_macos & {description:                 "The number of bytes of main memory that is not active."}
+	host_memory_shared_bytes:           _memory_linux & {description:                 "The number of bytes of main memory shared between processes."}
+	host_memory_swap_free_bytes:        _memory_gauge & {description:                 "The number of free bytes of swap space."}
 	host_memory_swapped_in_bytes_total: _memory_counter & _memory_nowin & {
 		description: "The number of bytes that have been swapped in to main memory."
 	}
 	host_memory_swapped_out_bytes_total: _memory_counter & _memory_nowin & {
 		description: "The number of bytes that have been swapped out from main memory."
 	}
+	host_memory_swap_total_bytes:       _memory_gauge & {description:                 "The total number of bytes of swap space."}
+	host_memory_swap_used_bytes:        _memory_gauge & {description:                 "The number of used bytes of swap space."}
+	host_memory_total_bytes:            _memory_gauge & {description:                 "The total number of bytes of main memory."}
+	host_memory_used_bytes:             _memory_linux & {description:                 "The number of bytes of main memory used by programs or caches."}
 	host_memory_wired_bytes: _memory_macos & {description: "The number of wired bytes of main memory."}
 
 	// Network

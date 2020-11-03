@@ -45,4 +45,8 @@ components: transforms: ansi_stripper: {
 		logs:    true
 		metrics: null
 	}
+
+	output: metrics: {
+		processing_errors_total: _metrics._internal._processing_errors_total
+	}
 }

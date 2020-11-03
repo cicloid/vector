@@ -113,4 +113,6 @@ components: sinks: aws_cloudwatch_metrics: {
 			summary:      false
 		}
 	}
+
+	output: metrics: _metrics._defaults._component_metrics
 }
