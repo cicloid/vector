@@ -100,4 +100,14 @@ components: sources: stdin: {
 				"""
 		}
 	}
+
+	output: metrics: {
+		events_processed_total: _metrics._internal._events_processed_total
+		processed_bytes_total:  _metrics._internal._processed_bytes_total
+		stdin_reads_failed_total: {
+			description: "The total number of errors reading from stdin."
+			type:        "counter"
+			tags:        _metrics._tags._default._component
+		}
+	}
 }

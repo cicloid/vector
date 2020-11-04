@@ -182,4 +182,35 @@ components: sources: syslog: {
 				"""
 		}
 	}
+
+	output: metrics: {
+		connection_read_errors_total: {
+			description: "TODO"
+			type:        "counter"
+			tags:        _metrics._tags._default._component & {
+				mode: {
+					description: ""
+					required:    true
+					options: {
+						udp: "User Datagram Protocol"
+					}
+				}
+			}
+		}
+		events_processed_total: _metrics._internal._events_processed_total
+		processed_bytes_total:  _metrics._internal._processed_bytes_total
+		utf8_convert_errors_total: {
+			description: "TODO"
+			type:        "counter"
+			tags:        _metrics._tags._default._component & {
+				mode: {
+					description: ""
+					required:    true
+					options: {
+						udp: "User Datagram Protocol"
+					}
+				}
+			}
+		}
+	}
 }

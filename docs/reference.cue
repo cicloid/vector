@@ -154,6 +154,8 @@ _values: {
 	//
 	// For example, the `http` sink has a `HTTP` title.
 	title: string
+
+	output: metrics: #MetricOutput
 }
 
 // `#CompressionAlgorithm` specified data compression algorithm.
@@ -854,6 +856,11 @@ _values: {
 
 #Unit: "bytes" | "events" | "milliseconds" | "requests" | "seconds"
 
+// Configuration for the Vector instance itself
+#Vector: {
+	output: metrics: #MetricOutput
+}
+
 components: close({
 	sources:    #Components
 	transforms: #Components
@@ -898,3 +905,5 @@ remap: {
 		name: Name
 	}
 }
+
+vector: #Vector

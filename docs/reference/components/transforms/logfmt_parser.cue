@@ -172,4 +172,9 @@ components: transforms: logfmt_parser: {
 				"""
 		}
 	}
+
+	output: metrics: {
+		events_processed:  _metrics._internal._events_processed
+		processing_errors: _metrics._internal._processing_errors
+	}
 }

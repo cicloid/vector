@@ -97,4 +97,9 @@ components: sources: logplex: {
 			timestamp: fields._current_timestamp
 		}
 	}
+
+	output: metrics: {
+		request_read_errors_total: _metrics._internal._request_read_errors_total
+		requests_received_total:   _metrics._internal._requests_received_total
+	}
 }

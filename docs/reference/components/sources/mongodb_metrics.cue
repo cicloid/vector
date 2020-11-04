@@ -94,5 +94,9 @@ components: sources: mongodb_metrics: {
 		}
 	}
 
-	output: metrics: _metrics._mongodb
+	output: metrics: _metrics._mongodb & {
+		collect_completed_total:      _metrics._internal._collect_completed_total
+		collect_duration_nanoseconds: _metrics._internal._collect_duration_nanoseconds
+		request_error_total:          _metrics._internal._request_error_total
+	}
 }

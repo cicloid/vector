@@ -144,4 +144,13 @@ components: transforms: reduce: {
 			}
 		},
 	]
+
+	output: metrics: {
+		events_processed_total: _metrics._internal._events_processed_total
+		stale_events_flushed_total: {
+			description: "The number of stale events that Vector has flushed."
+			type:        "counter"
+			tags:        _metrics._tags._default._component
+		}
+	}
 }

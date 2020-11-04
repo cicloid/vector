@@ -3,6 +3,12 @@ package metadata
 _metrics: _mongodb: {
 	_default_tags: _metrics._tags._default._mongodb_metrics
 
+	bson_parse_error_total: {
+		description: "The total number of BSON parsing errors."
+		type:        "counter"
+		tags:        _default_tags
+	}
+
 	mongodb_assets_total: {
 		description: "Number of assertions raised since the MongoDB process started."
 		type:        "counter"

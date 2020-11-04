@@ -46,6 +46,13 @@ _metrics: _internal: {
 	_collect_duration_nanoseconds: {
 		type: "histogram"
 	}
+	_collect_completed_total: {
+		type: "counter"
+	}
+	_events_discarded_total: {
+		description: "The total number of events discarded by this component."
+		type:        "counter"
+	}
 	_events_processed_total: {
 		description: "The total number of events processed by this component."
 		required:    true
@@ -164,7 +171,20 @@ _metrics: _internal: {
 		type: "histogram"
 		tags: _component_tags
 	}
+	_request_errors_total: _http_request_errors_total
+	_request_read_errors_total: {
+		type: "counter"
+		tags: _component_tags
+	}
+	_request_received_total: {
+		type: "counter"
+		tags: _component_tags
+	}
 	_requests_completed_total: {
+		type: "counter"
+		tags: _component_tags
+	}
+	_requests_received_total: {
 		type: "counter"
 		tags: _component_tags
 	}

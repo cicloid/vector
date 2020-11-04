@@ -122,4 +122,8 @@ components: transforms: rename_fields: {
 			]
 		}
 	}
+
+	output: metrics: {
+		events_processed_total: _metrics._internal._events_processed_total
+	}
 }

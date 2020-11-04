@@ -218,4 +218,24 @@ components: transforms: tag_cardinality_limit: {
 				"""
 		}
 	}
+
+	output: metrics: {
+		events_processed_total: _metrics._internal._events_processed_total
+		tag_value_limit_exceeded_total: {
+			description: """
+				The total number of events discarded because the tag has been rejected after
+				hitting the configured `value_limit`.
+				"""
+			type: "counter"
+			tags: _metrics._tags._default._component
+		}
+		value_limit_reached_total: {
+			description: """
+				The total number of times new values for a key have been rejected because the
+				value limit has been reached.
+				"""
+			type: "counter"
+			tags: _metrics._tags._default._component
+		}
+	}
 }

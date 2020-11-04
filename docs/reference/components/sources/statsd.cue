@@ -120,4 +120,20 @@ components: sources: statsd: {
 				"""
 		}
 	}
+
+	output: metrics: {
+		connection_errors_total: _metrics._internal._connection_errors_total
+		events_processed_total:  _metrics._internal._events_processed_total
+		invalid_record_total: {
+			description: "The total number of invalid journald records discarded."
+			required:    true
+			type:        "counter"
+		}
+		invalid_record_bytes_total: {
+			description: "The total number of bytes from discarded journald records."
+			required:    true
+			type:        "counter"
+		}
+		processed_bytes_total: _metrics._internal._processed_bytes_total
+	}
 }

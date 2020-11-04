@@ -147,5 +147,12 @@ components: sources: socket: {
 				message:   _line
 				host:      _values.local_host
 			}
-		}]
+		},
+	]
+
+	output: metrics: {
+		connection_errors_total: _metrics._internal._connection_errors_total
+		events_processed_total:  _metrics._internal._events_processed_total
+		processed_bytes_total:   _metrics._internal._processed_bytes_total
+	}
 }

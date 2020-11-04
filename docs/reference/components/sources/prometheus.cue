@@ -71,10 +71,5 @@ components: sources: prometheus: {
 		}
 	}
 
-	output: metrics: {
-		counter:   output._passthrough_counter
-		gauge:     output._passthrough_gauge
-		histogram: output._passthrough_histogram
-		summary:   output._passthrough_summary
-	}
+	output: metrics: _metrics._default._prometheus_metrics
 }

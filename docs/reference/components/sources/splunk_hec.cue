@@ -92,4 +92,22 @@ components: sources: splunk_hec: {
 			timestamp: fields._current_timestamp
 		}
 	}
+
+	output: metrics: {
+		encode_errors_total: {
+			description: "The total number of errors encoding Splunk HEC to JSON."
+			type:        "counter"
+			tags:        _metrics._tags._default._component
+		}
+		events_processed_total: _metrics._internal._events_processed_total
+		processed_bytes_total:  _metrics._internal._processed_bytes_total
+		request_errors_total:   _metrics._internal._request_errors_total
+		request_received_total: _metrics._internal._request_received_total
+		source_missing_keys_total: {
+			description: "The total number of failures to render template for source, leaving empty."
+			type:        "counter"
+			tags:        _metrics._tags._default._component
+		}
+		sourcetype_missing_keys_total: source_missing_keys_total
+	}
 }

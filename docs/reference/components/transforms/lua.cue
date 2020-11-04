@@ -470,4 +470,10 @@ components: transforms: lua: {
 				"""
 		}
 	}
+
+	output: metrics: {
+		events_processed_total:  _metrics._internal._events_processed_total
+		memory_used:             _metrics._internal._memory_used
+		processing_errors_total: _metrics._internal._processing_errors_total
+	}
 }
