@@ -19,6 +19,7 @@ fn batching(
     num_events: usize,
     event_len: usize,
 ) -> Benchmark {
+    // TODO create runtime in setup, block on forwarding, add black_hole
     Benchmark::new(bench_name, move |b| {
         b.iter_with_setup(
             move || {
@@ -56,6 +57,7 @@ fn partitioned_batching(
     num_events: usize,
     event_len: usize,
 ) -> Benchmark {
+    // TODO create runtime in setup, block on forwarding, add black_hole
     Benchmark::new(bench_name, move |b| {
         b.iter_with_setup(
             move || {

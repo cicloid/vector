@@ -21,6 +21,7 @@ fn benchmark_http_no_compression(c: &mut Criterion) {
 
     let _srv = serve(out_addr);
 
+    // TODO create topology once, send one Batch size at a time
     let bench = Benchmark::new("http_no_compression", move |b| {
         b.iter_with_setup(
             || {
