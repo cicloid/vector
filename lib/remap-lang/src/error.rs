@@ -118,15 +118,15 @@ impl StdError for RemapError {
 
 impl fmt::Display for RemapError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        let mut details = "remap error".to_owned();
+        let mut details = vec!["remap error".to_owned()];
         let mut error: Option<&(dyn StdError + 'static)> = Some(&self.0);
 
         while let Some(current) = error {
-            details = format!("{}: {}", details, current);
+            details.push(current.to_string());
             error = current.source();
         }
 
-        f.write_str(&details)
+        f.write_str(&details.join(": "))
     }
 }
 
