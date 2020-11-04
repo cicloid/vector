@@ -34,7 +34,7 @@ pub struct Remap {
 }
 
 impl Remap {
-    fn execute(&self, event: &Event) -> remap::Result<Option<remap::Value>> {
+    fn execute(&self, event: &Event) -> Result<Option<remap::Value>, remap::RemapError> {
         // TODO(jean): This clone exists until remap-lang has an "immutable"
         // mode.
         //
